@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"/Users/bpratyush/Downloads/C VS/DSA_BITS/Week5/C.c","tests":[{"id":1707831271694,"input":"5\n1 2 6 23 3","output":"3 23 6 2 1"},{"id":1707831287007,"input":"6\n1 5 2 9 11 4","output":"4 11 9 2 5 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/bpratyush/Downloads/C VS/DSA_BITS/Week5/C.c","group":"local","local":true}
