@@ -14,9 +14,7 @@ ll getsize(ll x) {
 ll pwr(ll x, ll n) {
     if (n == 0) return 1;
     ll result = 1;
-    while (n--) {
-        result *= x;
-    }
+    while (n--) result*=x;
     return result;
 }
 

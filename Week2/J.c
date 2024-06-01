@@ -31,5 +31,4 @@ int main(void) {
     int N;
     scanf("%d", &N);
     generateSpiralMatrix(N);
-    return 0;
 }

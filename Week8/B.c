@@ -48,7 +48,6 @@ void printKMax(int arr[], int N, int K) {
     deque Qi;
     Qi.head = 0;
     Qi.tail = 0;
-
     int i;
     for (i = 0; i < K; ++i) {
         while (!empty(&Qi) && arr[i] >= arr[back(&Qi)]) dequeue_back(&Qi);

@@ -44,7 +44,7 @@ int main() {
     int n, k;
     scanf("%d %d", &n, &k);
     char s[n];
-    for(int i = 0; i < n; i++) scanf(" %c", &s[i]); //Leave whitespace
+    for(int i = 0; i < n; i++) scanf(" %c", &s[i]); 
     int result = calculateSumOfSquares(s, n, k);
     printf("%d", result);
 }

@@ -1,15 +1,12 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 unsigned long long Karatsuba(unsigned long long a, unsigned long long b) {
     unsigned long long digits;
     unsigned long long lefta, righta, leftb, rightb;
     unsigned long long x1, x2, x3;
-    if (a < 10 || b < 10) {
-        return a*b;
-    }
+    if (a < 10 || b < 10) return a*b;
     string astr = to_string(a);
     string bstr = to_string(b);
     digits = max(astr.length(), bstr.length());
@@ -26,7 +23,6 @@ unsigned long long Karatsuba(unsigned long long a, unsigned long long b) {
     return x1 * pow(10, 2*half) + (x3-x2-x1) * pow(10, half) + x2;
 }
 
-int main()
-{
+int main(){
     cout << Karatsuba(3141592653589793238ull, 2718281828459045235ull);
 }

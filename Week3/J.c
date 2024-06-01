@@ -21,5 +21,4 @@ int main() {
     ll product = 1;
     for (int i = 0; i < n; i++) product = (product * binexp(a[i], b[i])) % MOD;
     printf("%lld\n", product);
-    return 0;
 }

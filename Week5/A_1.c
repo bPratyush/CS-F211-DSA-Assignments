@@ -26,7 +26,6 @@ Node* addTwoNumbers(Node* l1, Node* l2) {
     dummy->val=0;
     Node* p = l1, *q = l2, *curr = dummy;
     int carry = 0;
-
     while (p || q) {
         int x = (p) ? p->val : 0;
         int y = (q) ? q->val : 0;

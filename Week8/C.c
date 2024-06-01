@@ -23,10 +23,8 @@ void push(stack* s, int x){
 }
 
 int pop(stack* s){
-    if(empty(s)) {
-        printf("Underflow\n");
-        return -1;
-    } else {
+    if(empty(s)) return -1;
+    else {
         s->top--;
         return s->arr[s->top+1];
     }
@@ -57,9 +55,7 @@ long long calculate(int n, int a[n]) {
     //The product (i - left[i]) * (right[i] - i) gives the total number of contiguous subarrays in which a[i] is the minimum.
     //Multiplying the product by a[i] gives the total contribution of a[i] to the sum of minimum elements of all subarrays
     long long sum = 0;
-    for(int i = 0; i < n; i++) {
-        sum = (sum + (long long)a[i] * (i - left[i]) * (right[i] - i)) % MOD;
-    }
+    for(int i = 0; i < n; i++) sum = (sum + (long long)a[i] * (i - left[i]) * (right[i] - i)) % MOD;
     return sum;
 }
 

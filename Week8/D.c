@@ -14,19 +14,14 @@ bool stackempty(stack* s){
 }
 
 void push(stack* s, int x){
-    if(s->top == MAX_SIZE - 1) {
-        printf("Overflow\n");
-        return;
-    }
+    if(s->top == MAX_SIZE - 1) return;
     s->top++;
     s->arr[s->top] = x;
 }
 
 int pop(stack* s){
-    if(stackempty(s)) {
-        printf("Underflow\n");
-        return -1;
-    } else {
+    if(stackempty(s)) return -1;
+        else {
         s->top--;
         return s->arr[s->top+1];
     }

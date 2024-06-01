@@ -70,8 +70,8 @@ void printListBackward(Node* head) {
         return;
     }
     Node* temp = head;
-    while (temp->next != NULL) temp = temp->next;
-    while (temp != NULL) {
+    while (temp->next) temp = temp->next;
+    while (temp) {
         printf("%d ", temp->val);
         temp = temp->prev;
     }
@@ -114,6 +114,4 @@ int main(void){
             printListBackward(a);
         }
     }
-
-    return 0;
 }

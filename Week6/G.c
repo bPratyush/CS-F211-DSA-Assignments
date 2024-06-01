@@ -23,7 +23,7 @@ void heapify(int arr[], int n, int i) {
     int l = left(i);
     int r = right(i);
     int largest = i;
-    if (l < n && arr[l] > arr[i]) largest = l;
+    if (l < n && arr[l] > arr[largest]) largest = l;
     if (r < n && arr[r] > arr[largest]) largest = r;
     if (largest != i) {
         swap(&arr[i], &arr[largest]);

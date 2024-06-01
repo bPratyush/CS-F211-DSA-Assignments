@@ -15,7 +15,6 @@ int solution(uint64_t a[] , int n , int k){
     int start = 0;
     int end = k-1;
     int max_count=0;
-    
     while(end<n){
         uint64_t temp=0;
         int count=0;

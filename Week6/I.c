@@ -32,8 +32,7 @@ void maxHeapify(int i) {
     int largest = i;
     int left = Left(i);
     int right = Right(i);
-    if (left < maxHeapSize && maxHeap[left] > maxHeap[i]) largest = left;
-    else largest=i;
+    if (left < maxHeapSize && maxHeap[left] > maxHeap[largest]) largest = left;
     if (right < maxHeapSize && maxHeap[right] > maxHeap[largest]) largest = right;
     if (largest != i) {
         swapMax(i, largest);
@@ -77,8 +76,7 @@ void minHeapify(int i) {
     int smallest = i;
     int left = Left(i);
     int right = Right(i);
-    if (left < minHeapSize && minHeap[left] < minHeap[i]) smallest = left;
-    else smallest=i;
+    if (left < minHeapSize && minHeap[left] < minHeap[smallest]) smallest = left;
     if (right < minHeapSize && minHeap[right] < minHeap[smallest]) smallest = right;
     if (smallest != i) {
         swapMin(i, smallest);

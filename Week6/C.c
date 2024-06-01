@@ -18,8 +18,7 @@ void heapify(int arr[], int n, int i) {
     int l = left(i);
     int r = right(i);
     int largest = i;
-    if (l < n && arr[l] > arr[i]) largest = l;
-    else largest=i;
+    if (l < n && arr[l] > arr[largest]) largest =  l;
     if (r < n && arr[r] > arr[largest]) largest = r;
     if (largest != i) {
         swap(&arr[i], &arr[largest]);
@@ -36,7 +35,7 @@ void heapSort(int a[],int n){
     for(int i=n-1;i>=1;i--){
         swap(&a[0],&a[i]);
         n--;
-        maxheapify(a,n,0);
+        heapify(a,n,0);
     }
 }
 

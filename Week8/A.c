@@ -19,9 +19,8 @@ void push(stack* s, char x){
 }
 
 char pop(stack* s){
-    if(stackempty(s)) {
-        return -1;
-    } else {
+    if(stackempty(s)) return -1;
+    else {
         s->top--;
         return s->arr[s->top+1];
     }

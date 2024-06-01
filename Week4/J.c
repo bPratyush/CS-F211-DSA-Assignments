@@ -7,9 +7,8 @@ void processBoard(int n, int m, char board[n][m+1]) {
             if(board[i][j] == '*') {
                 board[i][j] = '.';
                 board[fall--][j] = '*';
-            } else if(board[i][j] == 'o') {
-                fall = i-1;
             }
+            else if(board[i][j] == 'o') fall = i-1;
         }
     }
     for(int i = 0; i < n; i++) printf("%s\n", board[i]);

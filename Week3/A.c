@@ -35,5 +35,4 @@ int main(){
     scanf("%s", str);
     int length = LPS(str, n);
     printf("%d\n", length);
-    return 0;
 }

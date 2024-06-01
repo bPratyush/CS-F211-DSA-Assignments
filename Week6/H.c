@@ -33,7 +33,7 @@ void buildMinHeap(HeapNode heap[], int n) {
 }
 
 int* mergeKSortedArrays(int* arr[], int k, int sizes[]) {
-    HeapNode* heap = (HeapNode*)malloc(k * sizeof(HeapNode));
+    HeapNode* heap = malloc(k * sizeof(HeapNode));
     int totalSize = 0;
     for (int i = 0; i < k; i++) {
         heap[i].val = arr[i][0];
@@ -42,13 +42,11 @@ int* mergeKSortedArrays(int* arr[], int k, int sizes[]) {
         totalSize += sizes[i];
     }
     buildMinHeap(heap, k);
-    int* res = (int*)malloc(totalSize * sizeof(int));
+    int* res = malloc(totalSize * sizeof(int));
     for (int i = 0; i < totalSize; i++) {
         HeapNode root = heap[0];
         res[i] = root.val;
-        if (root.elemIdx < sizes[root.arrIdx]) {
-            root.val = arr[root.arrIdx][root.elemIdx++];
-        }
+        if (root.elemIdx < sizes[root.arrIdx]) root.val = arr[root.arrIdx][root.elemIdx++];
         else root.val = INT_MAX;
         heap[0] = root;
         minHeapify(heap, k, 0);
@@ -65,7 +63,7 @@ int main() {
 
     for (int i = 0; i < k; i++) {
         scanf("%d", &listSizes[i]);
-        lists[i] = (int*)malloc(sizeof(int) * listSizes[i]);
+        lists[i] = malloc(sizeof(int) * listSizes[i]);
         for (int j = 0; j < listSizes[i]; j++) scanf("%d", &lists[i][j]);
     }
 
